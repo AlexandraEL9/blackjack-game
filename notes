@@ -48,3 +48,58 @@ if (age < 100) {
 } else {
     console.log("Not elegible, you have already gotten one")
 }
+
+                 //lesson 5-if/else for the game
+let firstCard = 10
+let secondCard = 7
+let sum = firstCard + secondCard
+                 
+// Write the conditional according to these rules:
+                 
+// if less than or equal to 20 -> "Do you want to draw a new card? 🙂"
+// else if exactly 21 -> "Wohoo! You've got Blackjack! 🥳"
+// else -> "You're out of the game! 😭"
+if (sum <= 20) {
+    console.log("Do you want to draw a new card? 🙂")
+} else if (sum === 21) {
+    console.log("Wohoo! You've got Blackjack! 🥳")
+} else {
+    console.log("You're out of the game! 😭")
+}
+
+                 //lesson 6- add the hasBlackJack variable
+let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard
+                 
+if (sum <= 20) {
+    console.log("Do you want to draw a new card? 🙂")
+} else if (sum === 21) {
+    console.log("Wohoo! You've got Blackjack! 🥳")
+} else {
+    console.log("You're out of the game! 😭")
+}
+       // CASH OUT!
+console.log(hasBlackJack)
+  //place in variable area
+let hasBlackJack = false
+  //within 21 has black jack area of logic
+hasBlackJack = true
+  
+
+//completed code
+  let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard
+let hasBlackJack = false
+                 
+if (sum <= 20) {
+    console.log("Do you want to draw a new card? 🙂")
+} else if (sum === 21) {
+    console.log("Wohoo! You've got Blackjack! 🥳")
+    hasBlackJack = true
+} else {
+    console.log("You're out of the game! 😭")
+}
+//cash out
+console.log(hasBlackJack)

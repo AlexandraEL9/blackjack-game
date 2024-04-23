@@ -32,5 +32,8 @@ let firstCard = 10;
         };
     // 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
     function newCard() {
-        console.log("Drawing a new card from the deck!");
+        let card = 3;
+        sum = sum += card;
+       
+        startGame();
     }

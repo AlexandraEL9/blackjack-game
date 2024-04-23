@@ -5,10 +5,8 @@ let firstCard = 10;
         let isAlive = true;
         let message = "";
         
-        // Create a function to update the message element
-        function setMessage(message) {
-            document.getElementById("message-el").textContent = message;
-        }
+       // 1. Store the message-el paragraph in a variable called messageEl
+        let messageEl = document.getElementById("message-el")
 
         // Create a startGame() function
         function startGame() {
@@ -21,5 +19,7 @@ let firstCard = 10;
                 message = "You're out of the game! 😭";
                 isAlive = false;
             }
+            messageEl.textContent = message;
+        }
 
-            // Update the message element
+             // 2. Display the message in the messageEl using messageEl.textContent

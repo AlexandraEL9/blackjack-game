@@ -213,3 +213,29 @@ eg let cardsEl = document.getElementById("cards-el");
 
  // 3. Render the cars on the page using this format -> "Cards: 10 4" (js)
  cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
+
+               //lesson 16 add new card button
+ <!-- 1. Create a NEW CARD button, make it run newCard() on click (html/js)-->
+eg <button onclick="newCard()">NEW CARD</button>
+ // 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
+eg function newCard() {
+        console.log("Drawing a new card from the deck!");
+    }
+ /* 3. Make sure that the two buttons have some space between
+each other when they are rendered out vertically */ (css)
+eg add margin-bottom to css eg margin: 2px
+
+
+             //lesson 16 add to the sum when the new card is clicked
+-within nwCard function{
+    // 1. Create a card variable, and hard code its value to a number (2-11)
+    let card = 3;
+    
+    // 2. Add the new card to the sum variable
+    sum = sum += card;
+    // 3. Call startGame()
+    startGame()
+}
+
+         //lesson 17 rename startGame function
+change to renderGame as not only starting a new game- just showing on screen

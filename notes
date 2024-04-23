@@ -186,3 +186,30 @@ eg  <button id="start-game-btn" onclick="startGame()">START GAME</button>
 eg function startGame(){
     (paste conditionals within curly braces of the function)
 } 
+
+                //lesson 13 showing message in browser
+create variable for message/ Store the message-el paragraph in a variable called messageEl
+        let messageEl = document.getElementById("message-el")
+- display the message in the messageEl using messageEl.text content- this goes within the function at the botton
+eg  messageEl.textContent = message;
+
+                //lesson 14 display the sum of the cards
+  <!-- 1. Give the sum paragraph and id of sum-el (html) -->
+  eg <p id="sum-el">Sum:</p>
+
+  2. Store the sum paragraph in a variable called sumEl
+  eg. let sumEl = document.getElementById("sum-el")
+
+  3. render sum on the page
+            sumEl.textContent = "Sum: " + sum;
+
+              //lesson 15 display the cards
+              
+<!-- 1. Give the cards paragraph and id of cards-el (html)-->
+eg <p id="cards-el">Cards:</p>
+
+// 2. Store the cards paragraph in a variable called cardsEl (js)
+eg let cardsEl = document.getElementById("cards-el");
+
+ // 3. Render the cars on the page using this format -> "Cards: 10 4" (js)
+ cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;

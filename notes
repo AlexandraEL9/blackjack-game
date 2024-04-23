@@ -455,3 +455,41 @@ for (let i = 0; i < sentence.length; i ++) {
 for (let i = 0; i < sentence.length; i ++) {
    greetingEl.textContent += (sentence[i] + " ")
 }
+
+
+               //Lesson 30 use a loop to render cards
+ // Create a for loop that renders out all the cards instead of just two
+ for (let 1 = 0: i < cards.length; i++ ) {
+    cardsEl.textContent += cards[i] + " "
+ }
+
+
+               //lesson 31 avoiding hard coding 
+// Create a function, getRandomCard(), that always returns the number 5
+function getRandomCard()
+
+               //lesson 32 returning values in functions
+let player1Time = 102
+let player2Time = 107
+
+// select multiple of same cmd+d - ctrl+d
+function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    } else if (player2Time < player1Time) {
+        return player2Time
+    } else {
+        return player1Time
+    }
+}
+let fastestRace = getFastestRaceTime()
+console.log(fastestRace) //returns 102
+
+// Write a function that returns the total race time
+// Call/invoke the function and store the returned value in a new variable
+// Finally, log the variable out
+function getTotalRaceTime(){
+    return player1Time + player2Time
+}
+let totalRaceTime = getTotalRaceTime
+console.log(totalTime)

@@ -174,3 +174,15 @@ if (sum <= 20) {
 
 // 3. Log it out!
 console.log(message)
+
+                //lesson 10 link to stylesheet
+
+                //lesson 11 add basic styling
+
+                //lesson12 make the start button work
+- add button to html 
+eg  <button id="start-game-btn" onclick="startGame()">START GAME</button>
+-create function startGame() and run function when clicked
+eg function startGame(){
+    (paste conditionals within curly braces of the function)
+} 

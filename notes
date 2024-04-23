@@ -227,7 +227,7 @@ eg add margin-bottom to css eg margin: 2px
 
 
              //lesson 16 add to the sum when the new card is clicked
--within nwCard function{
+-within newCard function{
     // 1. Create a card variable, and hard code its value to a number (2-11)
     let card = 3;
     
@@ -238,4 +238,220 @@ eg add margin-bottom to css eg margin: 2px
 }
 
          //lesson 17 rename startGame function
-change to renderGame as not only starting a new game- just showing on screen
+- change to renderGame as not only starting a new game- just showing on screen
+- create new startGame() function that calls renderGane()
+eg function startGame() {
+            renderGame()
+        }
+
+          //lesson 18 fix card issues with an array
+issue not rendering 3rd card in Cards:
+need to store all cards into 1 variable
+-create an array
+    let cards = [firstCard, secondCard]
+- edit cardsEl.textContent to:
+     cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
+- above uses array indexing 
+
+      //lesson 19 Aside- arrays intro
+// Arrays - ordered lists of items
+
+let featuredPosts = [
+    "Check out my Netflix clone",
+    "Here's the code for my project",
+    "I've just relaunched my portfolio"
+]
+
+// Create an array that lists your i.e. experience, education, licenses, skills or similar
+// The items of the array should be strings
+let education = [
+   "GCSE'a all A-c",
+   "A Levels",
+   "Degree in English",
+   "PGCE and QTS"
+   "Level 5 Diploma Full Stack Web Development"
+]
+
+       //lesson 20 Array indexes
+// Arrays - ordered lists of items
+- arrays 0 index so 1st item has index of 0
+let featuredPosts = [
+    "Check out my Netflix clone",
+    "Here's the code for my project",
+    "I've just relaunched my portfolio"
+]
+
+
+let experience = ["CEO at Scrimba", "Frontend developer at Xeneta", "People counter for Norstat"]
+
+// Make the following appear in the console:
+// Frontend developer at Xeneta
+// People counter for Norstat
+// CEO at Scrimba
+console.log(experience[1])
+console.log(experience[2])
+console.log(experience[0]);
+
+   //length and index are different
+let featuredPosts = [
+    "Check out my Netflix clone",
+    "Here's the code for my project",
+    "I've just relaunched my portfolio"
+]
+console.log(featuredPosts.length)// 3
+
+
+      //Lesson 21 Arrays with multiple data types
+// Array - ordered list of items - composite / complex data type
+let dataTypes = [
+    "strings",
+    45,
+    False
+]
+// Create an array that describes yourself. Use the three primitive data types you've learned
+// It should contain your name (string), your age (number), and whether you like pizza (boolean)
+let MyInfo = [
+    "Alex",
+    39,
+    True
+]
+
+                 //Lesson 22 array.push(), Array.pop()
+ - push() and pop() are METHODS
+ -PUSH - pushes things into the array     
+      eg cards.push() 
+-what you're pushing in goes in the parentheses 
+let cards = [7, 4]
+cards.push(6)
+//console.log(cards)
+returns  [7, 4, 6]
+
+// Push the newMessage to the messages array, and then log out the array
+
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately."
+]
+
+let newMessage = "Same here!"
+messages.push(newMessage);
+console.log(messages)
+//returns all of the messages
+
+--POP removes and item from an array
+
+messages.pop()
+console.log(messages)
+//removes the last of the messages from the array
+
+          //lesson 23 creating the cards array
+// 1. Create a new array - cards - that contains firstCard and secondCard
+eg let cards = [firstCard, secondCard];
+// 2. Refer to the cards array when rendering out the cards (within renderGame function)
+eg cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+
+
+            //lesson 24 push a new card into an array
+// Push the card to the cards array (within newCard function)
+ eg cards.push(card);
+
+
+            //lesson 25 counting in JavaScript
+// Count to ten!
+
+// We need to specify...
+
+// 1.Where should we START counting?
+// 2.Where is the FINISH line?
+// 3.What's the STEP SIZE we should use?
+
+//    1.START           2.FINISH     3.STEP SIZE
+for ( let count = 1;  count < 11;  count += 1 )  {
+    
+    console.log(count)
+
+}
+-start with for as counting is an example of a loop
+
+//count from 1- 20
+for ( let count = 1;  count < 21;  count += 1 )  {
+    
+    console.log(count)
+
+}
+//count from 10- 20
+for ( let count = 10;  count < 21;  count += 1 )  {
+    
+    console.log(count)
+
+}
+//count from 10- 20 in 2s
+for ( let count = 10;  count < 21;  count += 2 )  {
+    
+    console.log(count)
+
+}
+
+        //lesson 26 write 1st loop
+//create loop counting 0-5
+- convention- use i instad of count
+for (let i = 0; i < 6; i +=1) {
+    console.log(i)
+}
+
+// Create a for loop that counts from 10 to 100 in steps of 10
+// Use console.log to log out the numbers
+for (let i = 10; i < 101; i +=10) {
+    console.log(i)
+}
+
+
+           //lesson 27 for loops and arrays
+let messages = [
+    "Hey, how's it going?",        
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately.",
+    "Same here!",
+    "Great to hear"
+]
+//bad way- too much repetition
+// console.log(messages[0])
+// console.log(messages[1])
+// console.log(messages[2])
+// console.log(messages[3])
+
+// DRY - Don't repeat yourself- combine array with a for loop
+for (let i = 0; i < 5; i += 1) {
+    console.log(messages[i]) //i becomes index as loops through
+}// but not dynamic- does not take into account changes to the array
+
+//use .length - .length refers to the actual length of the array
+for (let i = 0; i < messages.length; i += 1) {
+    console.log(messages[i])
+}
+
+
+           //lesson 28 write array based for loop
+let cards = [7, 3, 9]
+
+// Create a for loop that logs out all the cards in the array
+// Use cards.length to specify how long the loop should run
+for (let i = 0; i < cards.length; i ++) {
+    console.log(cards[i])
+}
+
+         //lesson 29 for loops, arrays and the DOM
+let sentence = ["Hello ", "my ", "name ", "is ", "Per"] 
+let greetingEl = document.getElementById("greeting-el")
+
+// Render the sentence in the greetingEl paragraph using a for loop and .textContent
+for (let i = 0; i < sentence.length; i ++) {
+   greetingEl.textContent += (sentence[i])
+}
+// =+ keeps previous content from the loop so displays alltogether
+
+//keep spaces is no spaces in arrays?
+for (let i = 0; i < sentence.length; i ++) {
+   greetingEl.textContent += (sentence[i] + " ")
+}

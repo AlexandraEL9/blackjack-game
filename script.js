@@ -14,7 +14,9 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 // Create a function, getRandomCard(), that always returns the number 5
-function getRandomCard()
+function getRandomCard() {
+    return 5;
+}
 function startGame() {
     renderGame();
 }
@@ -40,7 +42,7 @@ function renderGame() {
 
 // Create a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard() {
-    let card = getRandomCard(); // Hardcoded value for demonstration purposes
+    let card = getRandomCard();
     sum += card;
     cards.push(card);
     renderGame();

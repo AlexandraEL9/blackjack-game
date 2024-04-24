@@ -493,3 +493,255 @@ function getTotalRaceTime(){
 }
 let totalRaceTime = getTotalRaceTime
 console.log(totalTime)
+
+            //lesson 33 use a function to set card values
+// 1. Create a function, getRandomCard(), that always returns the number 5
+function getRandonCard() {
+    return 5
+}
+// 2. Use getRandomCard() to set the values of firstCard and secondCard
+//edit existing code
+let firstCard = getRandonCard()
+let secondCard = getRandomCard()
+//and in new card
+let card = getRandomCard()
+//cards returned always are 5 as thar is the return value set so no 'randomness' yet
+
+
+            //lesson 34 Math.ramdom
+good for generating random numbers- card games, dice, 
+many computer games- crossyroad
+also cyber security to kake passwords and keys
+
+let randomNumber = Math.random() //method
+
+console.log(randomNumber)
+
+
+/* 
+
+What does Math.random() do?
+
+Your answer: 
+generates a random float between 0-1 (not inc 1)
+*/
+
+            //lesson 35 Math.Random() *6
+//creation of a dice function
+// Math.random *6 (six sides of a dice)
+let randomNumber = Math.random() * 6
+
+console.log(randomNumber)
+
+
+/* 
+
+In which range will our randomNumber be now?
+
+From:0
+To:5.999999999
+
+*/
+
+           //lesson 36 flooring the number with Math.random
+// let randomNumber = Math.random() * 6
+
+let flooredNumber = Math.floor(3.45632)
+
+console.log(flooredNumber)//3
+
+
+/* 
+
+What does Math.floor() do to positive numbers?
+
+Your answer: 
+removes the decimals
+
+*/
+
+                 //lesson 37 using Math.random( and Math.floor
+                 //to create a dice)
+let randomNumber = Math.floor (Math.random() * 6)
+
+console.log(randomNumber)
+
+/* 
+
+Write down all the possible values randomNumber can hold now!
+3, 0, 4, 2, 1, 5
+
+*/
+
+                 //lesson 38 complete dice function
+ // Try to modify the expression so that we get a range from 1 to 6
+let randomNumber = Math.floor( Math.random() * 6 )
+
+console.log(randomNumber) 
+//modification
+let randomNumber = Math.floor( Math.random() * 6) + 1  
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+function rollDice() {
+    let randomNumber = Math.floor( Math.random() * 6) + 1
+    return randomNumber
+}
+
+
+           //lesson 39 Mke getRandomCard work
+// Make this function return a random number between 1 and 13
+function getRandomCard() {
+    return getRandomCard = Math.floor( Math.random() * 13) + 1
+}
+
+          //lesson 40 complete getRandomNumber() function
+function getRandomCard() {
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    return Math.floor( Math.random()*13 ) + 1
+}
+//define a variable that return value is stored in
+//have a conditional that checks for the conditions and returns appropriate value
+function getRandomCard() {
+    let randomNumber = Math.floor( Math.random()*13 ) + 1
+    if (randomNumber > 10){
+        return 10
+    }
+    // if 11-13 -> return 10
+    else if (randomNumber === 1) {
+        return 11
+    }
+    else {
+        return randomNumber
+    }
+}
+
+             //lesson 41 Assign values in the startGame function
+function startGame() {
+    // Generate two random numbes
+    // Re-assign the cards and sum variables so that the game can start
+    renderGame()
+}
+//modified
+function startGame() {
+    isAlive = true //moved from list of variables
+    // Generate two random numbes
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+let cards = [firstCard, secondCard]
+sum = firstCard + secondCard
+    // Re-assign the cards and sum variables so that the game can start
+    renderGame()
+}
+
+        //lesson 42 Our new card feature is broken
+    //eg need to stop drawing cards once out of game
+//1. stop game when get 21
+//2. stop abilit to draw new card without starting game 1st (button works even when it shrouln't)
+- use logical operators which let you combine multiple conditions
+
+       // lesson 43 Logical operatore
+       // The AND operator (&&)
+
+//should the user get the certifiate?
+let hasCompletedCourse = true
+let givesCertificate = true
+//check if both above conditions are true to award certificate
+//could use nested ifs BUT very complicated and verbose/ clunky
+eg if (hasCompletedCourse === true) {
+    if (givesCertificate === true) {
+        generateCertificate()
+    }
+
+//modified
+if (hasCompletedCourse === true && givesCertificate === true) {
+    gernerateCertificate()
+}
+function generateCertificate() {
+    console.log("Generating certificate....")
+}
+//modified further
+if (hasCompletedCourse = true && true) {
+    gernerateCertificate()
+}
+function generateCertificate() {
+    console.log("Generating certificate....")
+}
+
+      //lesson 44 write a logical operator
+let hasSolvedChallenge = false
+let hasHintsLeft = false
+
+// Create an if statement that checks that both variables are false.
+// If so, run the showSolution() function
+
+function showSolution() {
+    console.log("Showing the solution....")
+}
+
+//modified
+if (hasSolvedChallenge = false && hasHintsLeft = false) {
+    showSolution()
+}
+function showSolution() {
+    console.log("Showing the solution....")
+}
+
+
+      //lesson 45 Logical operators
+      // the OR operator(||)
+let hasCompletedCourse = true
+let givesCertificate = true
+
+if (hasCompletedCourse === true || givesCertificate === true) {
+    generateCertificate()
+}
+
+function generateCertificate() {
+    console.log("Generating certificate....")
+}
+
+eg
+let hasCompletedCourse = true
+let givesCertificate = true
+
+if (likesDocumentaries === true || likesStartUps === true) {
+    recommendMovie()
+}
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}// will run reccommendMovie- both conditions true
+
+eg
+let hasCompletedCourse = true
+let givesCertificate = false
+
+if (likesDocumentaries === true || likesStartUps === true) {
+    recommendMovie()
+}
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}// will run reccommendMovie- one condition true
+
+eg
+let hasCompletedCourse = false
+let givesCertificate = false
+
+if (likesDocumentaries === true || likesStartUps === true) {
+    recommendMovie()
+}
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}// will NOT run reccommendMovie- neither condition is true
+
+
+      //lesson 46 Only trigger newCard()
+      //when appropriate
+function newCard() {
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+if (isAlive === true || hasBlackjack === false) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+}

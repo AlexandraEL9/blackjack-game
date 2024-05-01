@@ -745,3 +745,108 @@ if (isAlive === true || hasBlackjack === false) {
         cards.push(card)
         renderGame()
 }
+
+     //lesson 47 Object sneak Peak
+eg- show player name and how many 'credits' they have to play with.
+add <p> with id of player-el but hav no contents.
+
+<p id="player-el"></p>
+
+Then in js
+let playerName = "Per"
+let playerChips = 145
+
+let playerEL = document.getElementById("player-el")
+playerEl.textContent = playerName + ": $" + playerChips
+
+//this is ok but the name and chips are in 2 variables- really 
+//we want to combine them into 1
+//so can use "objects"- (buckets to store data)
+- create a "player" object to store diff data.
+-to create an object eg 
+
+let player = {
+    name: "Per",
+    chips: 145
+}
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
+
+      // lesson 48 intro to objects
+// Objects - store data in-depth - composite / complex data type
+// key-value pairs
+eg
+let course = {
+    title: "Learn CSS Grid for free",
+    lessons: 16,
+    creator: "Per Harald Borgen",
+    length: 63,
+    level: 2
+    isFree: true,
+    tags: ["html", "css"]
+}
+
+-to access information within object
+-use dot notation
+eg course.length
+console.log(course.length) //returns 63
+
+console.log(course.tags) // returns ["html", "css"]
+
+-Bracket notation
+eg
+console.log( course["tags"] )
+
+
+        //lesson 49 create own first object
+// Create an object that represents an airbnb castle listing.
+// It should contain at least one boolean, one string, one number, and one array
+// Log out at least two of the keys using the dot notation
+
+let Pontefract-Castle = {
+    Best-Room: "The Gainsborough Tower Suite",
+    Bedrooms: 14,
+    hasDungeon: true,
+    murdered-monarchs: ["Richard ii", "Richard iii", "Mary"]
+}
+console.log(Pontefract-Castle.bedrooms)
+console.log(Pontefract-Castle.hasDungeon)
+
+eg
+let castle = {
+    title: "Live like a king in my castle",
+    price: 190,
+    isSuperHost: true,
+    images: ["img/castle1.png", "img/caste2.png"]
+}
+console.log(castle.price)
+console.log(castle.isSuperHost)
+//returns 190, true
+
+           //lesson 50 use an object to store player data
+<!-- 1. Create a paragraph with an id of "player-el" -->
+<p id="player-el"></p>
+
+// 2. Create the player object. Give it two keys, name and chips, and set their values
+let player = {
+    name: "Alex",
+    chips: 200
+}
+// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
+let playerEl = document.getElementById("player-el")
+// 4. Render the player's name and chips in playerEl
+playerEl.textContent = player.name + ": $" + player.chips
+
+
+             //lesson 51 methods on an abject
+- create functions inside of objects- methods
+let player = {
+    name: "Per",
+    chips: 200,
+    sayHello: function() {
+        console.log("Heisann!")
+    }
+}
+
+player.sayHello()
+variable.dot function
